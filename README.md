@@ -81,5 +81,4 @@ CodeSphere/
 ## License 📜
 This project is for educational purposes as part of **Semester 3 Full Stack Development (FSD) coursework**.
 
-![Thank You](https://via.placeholder.com/600x200?text=Thank+You+for+Checking+Out+CodeSphere!)
 
