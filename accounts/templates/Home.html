@@ -1,0 +1,436 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <!-- -------------------------Bootstrap-Link------------------------- -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" defer></script>
+
+    <!-- -------------------------Google-Fonts-Inter------------------------- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat&display=swap"
+        rel="stylesheet">
+
+    <!-- -------------------------Css-Link------------------------- -->
+    <link rel="stylesheet" href="{% static 'css/Home.css' %}">
+</head>
+
+<body>
+
+    <!-- -------------------------Navbar------------------------- -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#home">CodeSphere</a>
+            <div class="d-flex align-items-center">
+                <a href="{% url 'register' %}" class="btn me-2 d-lg-none" id="Sign-Up-Btn">Sign Up</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#service">Service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pricing">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#faq">FAQ's</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <a href="{% url 'login' %}" class="btn btn-primary me-2" id="Log-Btn">Login</a>
+                    <a href="{% url 'register' %}" class="btn btn-primary" id="Ca-Btn">Create an Account</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- -------------------------Toggle-Navbar------------------------- -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title Title-Toggle">CodeSphere</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column justify-content-between">
+            <div class="Content-Toggle">
+                <h1 id="Content-Toggle-1">Create an Account</h1>
+                <h1 id="Content-Toggle-2">to Download More QR Codes</h1>
+            </div>
+            <div>
+                <a href="{% url 'register' %}" class="btn w-100" id="Ca-Toggle-Btn">Create an Account</a>
+                <a href="{% url 'login' %}" class="btn btn-outline-light w-100" id="Log-Toggle-Btn">Log In</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- -------------------------First-Page------------------------- -->
+    <section class="container new-home-introducing-section" id="home">
+        <div class="introducing-section-content">
+            <h2 class="introducing-section-content-header">Generate Powerful
+                Dynamic QR Codes</h2>
+            <p class="introducing-section-content-paragraph">Effortlessly create, customize, and monitor dynamic QR
+                codes.</p>
+            <button class="introducing-section-create-button">Create QR Code</button>
+        </div>
+        <div class="introducing-section-content-image-mobile">
+            <img src="{% static 'imgs/home-for-smallscreen.webp' %}" class="introducing-section-content-image-mscreen"
+                alt="Small Screen Image">
+        </div>
+        <div class="introducing-section-content-image">
+            <img src="{% static 'imgs/home-for-largescreen.webp' %}" class="introducing-section-content-image-lscreen"
+                alt="Large Screen Image">
+        </div>
+    </section>
+
+    <!-- -------------------------First-Work-Description------------------------- -->
+    <section class="first-work-description">
+        <div class="first-work-description-div">
+            <div class="first-work-description-flex-item">
+                <img src="https://qrcodeveloper.com/static/media/home-qr-code.3b99fa93f9d38969e59c910493c97ea9.svg"
+                    alt="">
+                <h5>Create custom QR codes</h5>
+                <p>Choose from a variety of dynamic types tailored to fit every need.</p>
+            </div>
+            <div class="first-work-description-flex-item">
+                <img src="https://qrcodeveloper.com/static/media/home-download.d797af03bdc62a7908dbe3fed643a38e.svg"
+                    alt="">
+                <h5>Download, share, and edit</h5>
+                <p>Instantly download, share, and edit on-the-go with the user-friendly editor.</p>
+            </div>
+            <div class="first-work-description-flex-item">
+                <img src="https://qrcodeveloper.com/static/media/home-stats.d68870e8a8d529e5ae6052a3e6259fa3.svg"
+                    alt="">
+                <h5>Track a variety of analytics</h5>
+                <p>Keep tabs on your QR code scans and get insights to make data-driven decisions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- -------------------------Second-Work-Description------------------------- -->
+    <section class="new-home-discover-section" id="service">
+        <h3 class="discover-section-heading">Discover Different QR Code Types</h3>
+        <p class="discover-section-description">Explore the diverse range of QR code types offered. Click on a type to
+            see a preview and uncover its potential.</p>
+        <div class="discover-section-codes-preview-block">
+            <div class="discover-section-codes-preview-list">
+                <div class="discover-section-code-item-active"><svg stroke="currentColor" fill="#E2E8F0"
+                        stroke-width="0" viewBox="0 0 16 16" height="25" width="25" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.002 1.002 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z">
+                        </path>
+                        <path
+                            d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243L6.586 4.672z">
+                        </path>
+                    </svg> URL</div>
+                <div class="discover-section-code-item-default"><svg stroke="currentColor" fill="#E2E8F0"
+                        stroke-width="0" viewBox="0 0 16 16" height="21" width="21" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353V2zM3.5 3h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1 0-1zm0 2.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1 0-1zm0 2.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1z">
+                        </path>
+                    </svg> Text</div>
+                <div class="discover-section-code-item-default"><svg stroke="currentColor" fill="#E2E8F0"
+                        stroke-width="0" viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="none" d="M0 0h24v24H0z"></path>
+                        <path
+                            d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3a4.237 4.237 0 00-6 0zm-4-4l2 2a7.074 7.074 0 0110 0l2-2C15.14 9.14 8.87 9.14 5 13z">
+                        </path>
+                    </svg> Wi-Fi</div>
+                <div class="discover-section-code-item-default">
+                    <img class="discover-section-code-icon-img"
+                        src="https://qrcodeveloper.com/static/media/home-pdf-icon-default.5248fae11d9b74b51e6a6d2d6401c0dc.svg"
+                        alt=""> PDF
+                </div>
+                <div class="discover-section-code-item-default"><svg stroke="currentColor" fill="#E2E8F0"
+                        stroke-width="0" viewBox="0 0 448 512" height="22" width="22"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z">
+                        </path>
+                    </svg> Video</div>
+                <div class="discover-section-code-item-default"><svg stroke="currentColor" fill="#E2E8F0"
+                        stroke-width="0" viewBox="0 0 20 20" aria-hidden="true" height="24" width="24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M18 3a1 1 0 00-1.196-.98l-10 2A1 1 0 006 5v9.114A4.369 4.369 0 005 14c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V7.82l8-1.6v5.894A4.37 4.37 0 0015 12c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V3z">
+                        </path>
+                    </svg> MP3</div>
+                <div class="discover-section-code-item-default"><svg stroke="currentColor" fill="#E2E8F0"
+                        stroke-width="0" viewBox="0 0 512 512" height="24" width="24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M448 405.333V106.667C448 83.198 428.802 64 405.333 64H106.667C83.198 64 64 83.198 64 106.667v298.666C64 428.802 83.198 448 106.667 448h298.666C428.802 448 448 428.802 448 405.333zM181.333 288l53.334 64 74.666-96 96 128H106.667l74.666-96z">
+                        </path>
+                    </svg> Image</div>
+            </div>
+            <div class="discover-section-codes-preview"><button
+                    class="introducing-section-create-button mt-0 hidden mobile:block">Create QR Code</button>
+                <div class="discover-section-codes-preview-image">
+                    <img class="discover-section-codes-preview-picture" src="{% static 'imgs/url-sidediv.png' %}"
+                        alt="">
+                    <img class="hidden"
+                        src="https://qrcodeveloper.com/static/media/home-text-preview.02c0551bce97ba6ea51ff0bdf1c9d6a8.svg"
+                        alt="">
+                    <img class="hidden" src="{% static 'imgs/wifi-sidediv.webp' %}" alt="">
+                    <img class="hidden" src="{% static 'imgs/pdf-sidediv.webp' %}" alt="">
+                    <img class="hidden" src="{% static 'imgs/video-sidediv.webp' %}" alt="">
+                    <img class="hidden" src="{% static 'imgs/mp3-sidediv.webp' %}" alt="">
+                    <img class="hidden" src="{% static 'imgs/image-sidediv.webp' %}" alt="">
+                </div>
+                <div class="discover-section-codes-preview-about">
+                    <div class="discover-section-codes-preview-about-content">
+                        <img class="discover-section-preview-content-icon"
+                            src="https://qrcodeveloper.com/static/media/home-gradient-text.6d132c3fbbdb171649309c8caf603fba.svg"
+                            alt="">
+                        <h5 class="discover-section-preview-content-title">Text</h5>
+                        <p class="discover-section-preview-content-description">A concise way to share messages,
+                            discount codes, or crucial information.</p>
+                    </div><button class="introducing-section-create-button mt-6 mobile:hidden">Create QR Code</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- -------------------------Empower-Section------------------------- -->
+    <section class="new-home-empower-section">
+        <div class="empower-section-gradient-wrapper">
+            <div class="empower-section-wrapper">
+                <div class="convert-code-icon-block">
+                    <div class="home-convert-code-qr-image-gradient-wrapper">
+                        <div class="convert-code-qr-image-wrapper z-10">
+                            <img class="convert-code-qr-image"
+                                src="https://qrcodeveloper.com/static/media/gradientqr.bfd93ce895d3a028ba03e7469e466947.svg"
+                                alt="">
+                        </div>
+                        <div class="home-convert-code-graient"></div>
+                    </div>
+                    <h5 class="convert-code-qr-text empower-block-title-text">Empower Your Brand With Dynamic QR Codes!
+                    </h5>
+                    <p class="empower-section-description">Harness the future of QR technology with our advanced dynamic
+                        QR types. Drive engagement, monitor success, and scale your marketing efforts seamlessly.</p>
+                    <button class="introducing-section-create-button">Create QR Code</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- -------------------------Bootstrap-Carousel------------------------- -->
+    <section class="carousel-section">
+        <div id="qrCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{% static 'imgs/pexels-imin-technology-276315592-12935064.jpg' %}" class="d-block w-100"
+                        alt="Generate & Share QR Codes">
+                    <div class="carousel-caption d-md-block">
+                        <h3>Generate & Share QR Codes Easily</h3>
+                        <p>Create custom QR codes for websites, PDFs, images, and videos.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'imgs/pexels-leeloothefirst-8372634.jpg' %}" class="d-block w-100"
+                        alt="Live Preview">
+                    <div class="carousel-caption d-md-block">
+                        <h3>Live Preview Before Generating</h3>
+                        <p>See how your QR code looks before saving.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'imgs/pexels-proxyclick-2451622.jpg' %}" class="d-block w-100"
+                        alt="Access QR Codes">
+                    <div class="carousel-caption d-md-block">
+                        <h3>Access Your QR Codes Anytime</h3>
+                        <p>Manage previously generated QR codes easily.</p>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#qrCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#qrCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- --------------------------Pricing------------------------- -->
+    <section id="pricing" class="pricing-section">
+        <h2 class="pricing-title">Pricing Plans</h2>
+        <p class="pricing-subtitle">Choose a plan that fits your needs</p>
+
+        <div class="pricing-container">
+            <!-- Free Plan -->
+            <div class="pricing-card">
+                <h3>Free Plan</h3>
+                <p>Basic QR code generation</p>
+                <ul>
+                    <li>✔ Generate standard QR codes</li>
+                    <li>✔ No customization options</li>
+                    <li>✔ Limited scan tracking</li>
+                </ul>
+                <p class="price">$0 / month</p>
+                <button class="pricing-btn">Select Now</button>
+            </div>
+
+            <!-- Pro Plan -->
+            <div class="pricing-card popular">
+                <h3>Pro Plan</h3>
+                <p>Advanced QR customization</p>
+                <ul>
+                    <li>✔ Customize colors & logos</li>
+                    <li>✔ Scan analytics & tracking</li>
+                    <li>✔ High-quality QR exports</li>
+                </ul>
+                <p class="price">$9.99 / month</p>
+                <button class="pricing-btn highlighted">Select Now</button>
+            </div>
+
+            <!-- Business Plan -->
+            <div class="pricing-card">
+                <h3>Business Plan</h3>
+                <p>Best for teams & enterprises</p>
+                <ul>
+                    <li>✔ Unlimited QR codes</li>
+                    <li>✔ Team collaboration features</li>
+                    <li>✔ API integration</li>
+                </ul>
+                <p class="price">$29.99 / month</p>
+                <button class="pricing-btn">Select Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- -------------------------FAQ's------------------------- -->
+    <section class="new-home-faq-section" id="faq">
+        <div class="landing-faq-wrapper container"> <!-- Bootstrap container added -->
+            <h5 class="landing-faq-title text-center">Frequently Asked Questions</h5>
+
+            <div class="faq-content-questions-list-block accordion" id="faqAccordion"> <!-- Bootstrap Accordion -->
+
+                <!-- FAQ 1 -->
+                <div class="accordion-item faq-content-question-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button faq-content-question-item-header" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#faq1">
+                            How does a QR code generator work?
+                        </button>
+                    </h2>
+                    <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body faq-content-question-item-answer">
+                            A QR code generator turns information like website links or contact details into a scannable
+                            code to access content without typing anything.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="accordion-item faq-content-question-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button faq-content-question-item-header" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#faq2">
+                            Who can create a QR code?
+                        </button>
+                    </h2>
+                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body faq-content-question-item-answer">
+                            QR Code Developer simplifies the generation process, making it easy for anyone, regardless
+                            of programming knowledge, to create a custom QR code in just a few clicks.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="accordion-item faq-content-question-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button faq-content-question-item-header" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#faq3">
+                            Can I use my QR Code for commercial purposes?
+                        </button>
+                    </h2>
+                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body faq-content-question-item-answer">
+                            Absolutely! QR Code Developer imposes no limitations on QR code usage. Utilizing QR codes is
+                            an excellent method to enhance the visibility of your business, brand, organization, or
+                            event.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="accordion-item faq-content-question-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button faq-content-question-item-header" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#faq4">
+                            What kind of information can be stored on a QR code?
+                        </button>
+                    </h2>
+                    <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body faq-content-question-item-answer">
+                            QR codes can hold a wide range of digital content, granting access to PDF files, websites,
+                            MP3s, videos, and even Wi-Fi networks.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="accordion-item faq-content-question-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button faq-content-question-item-header" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#faq5">
+                            Are QR codes free?
+                        </button>
+                    </h2>
+                    <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body faq-content-question-item-answer">
+                            QR Code Developer offers users a free trial period to explore the product. However, to
+                            retain access to custom editing and scan statistics, a premium plan is necessary.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- -------------------------Footer------------------------- -->
+    <footer class="new-home-footer">
+        <div class="new-home-footer-wrapper">
+            <div class="footer-main-info">
+                <div class="flex items-start cursor-pointer me-2 md:me-5"><img
+                        src="https://qrcodeveloper.com/static/media/newlogo.6c854506ad31e8a96446f808b7c6b3c5.svg"
+                        alt=""><span class="header-logo-text">CodeSphere</span></div>
+                <div class="footer-main-right">
+                    <div class="footer-main-right-links">
+                        <a class="footer-right-link" href="#home">Home</a>
+                        <a class="footer-right-link" href="#service">Service</a>
+                        <a class="footer-right-link" href="#pricing">Pricing</a>
+                        <a class="footer-right-link" href="#faq">FAQ's</a>
+                        <!-- <div class="footer-right-link cursor-pointer">Contact Us</div> -->
+                    </div>
+                    <div class="footer-main-right-auth-buttons">
+                        <a class="footer-login-button" href="{% url 'login' %}">Login</a>
+                        <a class="footer-create-account-button" href="{% url 'register' %}">Create an Account</a>
+                    </div>
+                </div>
+            </div>
+            <p class="footer-copyright">Copyright © 2025 | CodeSphere | All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- -------------------------JS-Link------------------------- -->
+    <script src="{% static 'js/home.js' %}" defer></script>
+</body>
+
+</html>

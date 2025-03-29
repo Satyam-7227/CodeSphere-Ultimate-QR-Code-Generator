@@ -1,0 +1,158 @@
+body {
+    font-family: 'Inter';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* -------------------------Login-Content------------------------- */
+.container {
+    width: 800px;
+    display: flex;
+    justify-content: center;
+}
+
+.form-box {
+    display: flex;
+    width: 100%;
+    background: rgba(255, 255, 255, -3.54);
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.left-side {
+    border-radius: 20px;
+    width: 50%;
+    align-items: center;
+    background: linear-gradient(180deg, #1b0139, #6917d4ad);
+    border: 1px solid #e2e8f0;
+    display: flex;
+    justify-content: center;
+    mix-blend-mode: hard-light;
+}
+
+.logo {
+    position: absolute;
+    top: 17.8px;
+    left: 21.8px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #9747ff;
+    font-weight: 900;
+}
+
+
+.left-side img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.right-side {
+    width: 50%;
+    padding: 40px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.input-group {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+}
+
+input {
+    width: 98%;
+    padding-left: 5px;
+    height: 34px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    align-items: center;
+    align-self: stretch;
+    background: #141315;
+    border-radius: 8px;
+    color: #fff;
+    display: flex;
+    font-family: 'Inter';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    gap: 8px;
+    height: 52px;
+    width: 100%;
+    justify-content: center;
+    line-height: 24px;
+    padding: 8px 16px;
+    transition: .2s;
+}
+
+p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+p a {
+    color: rgb(151, 71, 255);;
+    text-decoration: none;
+}
+
+/* -------------------------Media-Queries------------------------- */
+@media (max-width: 850px) {
+
+    body {
+        height: auto;
+    }
+
+    /* -------------------------Login-Content------------------------- */
+    .container {
+        margin: 50px 0px;
+    }
+
+    .form-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-side {
+        width: 20em;
+        height: 20em;
+        border-radius: 20px;
+        margin: 10px;
+    }
+
+    .left-side img {
+        object-fit: cover;
+        border-radius: 20px;
+    }
+
+    .right-side {
+        width: 90%;
+        padding: 40px 0px;
+        margin: 10px;
+    }
+
+    input {
+        width: 98%;
+        padding-left: 5px;
+    }
+}

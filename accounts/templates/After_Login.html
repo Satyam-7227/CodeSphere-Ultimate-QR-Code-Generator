@@ -1,0 +1,198 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>After_Login</title>
+
+    <!-- -------------------------Bootstrap-Link------------------------- -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" defer></script>
+
+    <!-- -------------------------Google-Fonts-Inter------------------------- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat&display=swap"
+        rel="stylesheet">
+
+    <!-- -------------------------Css-Link------------------------- -->
+    <link rel="stylesheet" href="{% static 'css/After_Login.css' %}">
+</head>
+
+<body>
+
+    <!-- ----------------------After-Login---------------------- -->
+    <div id="root">
+        <div class="flex flex-col items-center min-h-screen d-flex-important big-div">
+            <!-- ----------------------Navbar---------------------- -->
+            <div class="header-wrapper new-dashboard-header-wrapper ">
+                <div class="flex w-full justify-between">
+                    <div class="flex items-center justify-between gap-2">
+                        <div class=" navigation-control-icon-block"><img class="navigation-control-icon"
+                                src="https://qrcodeveloper.com/static/media/navigation-control-icon.3fd3a1b38bcf43506bedc82065ee7b5d.svg"
+                                alt="">
+                        </div>
+                        <a class="user-header-logo-block-width" href="#">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAACXBIWXMAACxLAAAsSwGlPZapAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAH7SURBVHgB7d3bTcMwGEDhPxUDMEJHYAPaDToKGxQ26CgwAWWDbkDYgA2CDWm5VnlAzqnT80lRkHipfOKAiHGa+KHruut0WvXHPM7Drj9um6Z5iRE1+y/SwF+m0zodN3HeNum4SyFeYwTvAfrBf0zHVSjLs2E5RoRZf85XvoP/KY/FOkbQpKt/ns7Pob8s0ix4ioLyDBildKVWUVgO4K3nuOIB8i2oCx2VbkFNFDQLoQwAMwDMADADwAwAMwDMADADwAwAMwDMADADwAwAMwDMALCLKKz0A43aHyg5A2AGgBkAZgCYAWAGgBkAZgCYAWAGgBkAZgCYAWAGgBkAZgCYAWAGgBkAZgCYAWAGgBkAVv0/aley7ujofkQGGFBgfL7tR2SAAYXG57AfkT8DGIf9iJwBAwqPz8IZwFo5AwYUHp/WAANKj4+3IJgBYAaAGQBmAJgBYAaAGQBmAFgO0IYwOcB9CGMA2KzfH38TQlT/CpNJ/DW0f0C8DGfC6H5dPf0rTfbvlDn5GVH7DCj64cfgfkH6FwPADAAzAMwAMAPADAAzAMwAMAPADAAzAMwAMAPADAAzAGwKAdqo124KAWpeVrObwiPJ63TaRp3m1c+Aitc1bfK+EdXPgKzCdU3T2qqgsnVN+TMuD5t1xMSc6LqmNj5+WXhIA7/9+o03Mu+QWpMiBkAAAAAASUVORK5CYII="
+                                alt="" width="25">
+                            <span class="header-logo-text" style="color: white;">CodeSphere</span></a>
+                    </div>
+                </div>
+            </div>
+            <!-- ----------------------Main-Content---------------------- -->
+            <div class="main-container flex">
+                <!-- ----------------------Sidebar---------------------- -->
+                <div class="sidebar" id="sidebar">
+                    <button class="sidebar-btn" onclick="toggleSection('generate')">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#e0c8ff"
+                            xmlns="http://www.w3.org/2000/svg" style="min-width: 20px; min-height: 20px;">
+                            <path d="M11 21L17 10H13L14 3L6 14H10L9 21H11Z" />
+                        </svg>
+                        <span class="btn-text">Generate</span>
+                    </button>
+                    <button class="sidebar-btn" onclick="toggleSection('previous')">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#e0c8ff"
+                            xmlns="http://www.w3.org/2000/svg" style="min-width: 20px; min-height: 20px;">
+                            <path d="M15 18L9 12L15 6V18Z" />
+                        </svg>
+                        <span class="btn-text">Previous</span>
+                    </button>
+                    <button class="sidebar-btn" onclick="toggleSection('profile')">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#e0c8ff"
+                            xmlns="http://www.w3.org/2000/svg" style="min-width: 20px; min-height: 20px;">
+                            <path
+                                d="M12 2C13.66 2 15 3.34 15 5C15 6.66 13.66 8 12 8C10.34 8 9 6.66 9 5C9 3.34 10.34 2 12 2ZM4 20C4 16.69 7.69 14 12 14C16.31 14 20 16.69 20 20H4Z" />
+                        </svg>
+                        <span class="btn-text">Profile</span>
+                    </button>
+                </div>
+                <!-- ----------------------Right-Content---------------------- -->
+                <div class="content" id="content">
+                    <div id="generate" class="section">
+                        <h2>Generate QR Code</h2>
+                        <div class="generate-container">
+                            <!-- Left Side: QR Code Form -->
+                            <div class="qr-form">
+                                <div class="qr-type-buttons">
+                                    <button type="button" onclick="showForm('url')">Website</button>
+                                    <button type="button" onclick="showForm('image')">Image</button>
+                                    <button type="button" onclick="showForm('video')">Video</button>
+                                    <button type="button" onclick="showForm('pdf')">PDF</button>
+                                </div>
+                                <form method="post" enctype="multipart/form-data" action="{% url 'generate_qr_code' %}">
+                                    {% csrf_token %}
+                                    <label>Title</label>
+                                    <input type="text" name="title" required>
+
+                                    <label>Description</label>
+                                    <input type="text" name="description" required>
+
+                                    <input type="hidden" name="qr_type" id="qrType">
+                                    <div id="dynamicInput"></div>
+
+                                    {% if messages %}
+                                    <ul class="messages">
+                                        {% for message in messages %}
+                                            {% if "qr" in message.tags %}
+                                                <li>{{ message }}</li>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </ul>
+                                    {% endif %}
+                                    <button type="submit">Generate QR</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="previous" class="section" style="display:none;">
+                        <h2>Previously Generated QR Codes</h2>
+                        {% if qr_codes %}
+                        <div class="qr-list">
+                            {% for qr in qr_codes %}
+                            <div class="qr-item">
+                                <img src="{{ qr.qr_image.url }}" alt="QR Code for {{ qr.title }}">
+                                <h5><strong>Title :</strong> {{ qr.title }}</h5>
+                                <p><strong>Description :</strong> {{ qr.description }}</p>
+                                <p><strong>Type :</strong> {{ qr.qr_type }}</p>
+                                <button>Delete</button>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        {% else %}
+                        <p>No QR codes found. <a href="#" onclick="toggleSection('generate')">Create your QR now</a>.
+                        </p>
+                        {% endif %}
+                    </div>
+                    <div id="profile" class="section" style="display: none;">
+                        <div class="profile-inside">
+                            <div class="profile-info">
+                                <h2>Profile</h2>
+                                <div class="profile-info-details">
+                                    <p><strong>Username :</strong> {{ request.user.username }}</p>
+                                    <p><strong>Email :</strong> {{ request.user.email }}</p>
+                                </div>
+                                <a href="{% url 'logout' %}" class="log-out">Logout</a>
+                            </div>
+                            <div class="profile-info">
+                                <h3>Change Password</h3>
+                                <!-- Display messages inside the form -->
+                                <div class="profile-info-details">
+                                    <form method="post">
+                                        {% csrf_token %}
+                                        <label for="new_password1">New Password :</label>
+                                        <input type="password" name="new_password1" placeholder="New Password"
+                                            id="new_password1" required>
+                                        <br>
+                                        <label for="new_password2">Confirm Password :</label>
+                                        <input type="password" name="new_password2" placeholder="Confirm New Password"
+                                            id="new_password2" required>
+                                        <br>
+                                        {% if messages %}
+                                        <ul class="messages">
+                                            {% for message in messages %}
+                                                {% if "profile" in message.tags %}
+                                                    <li>{{ message }}</li>
+                                                {% endif %}
+                                            {% endfor %}
+                                        </ul>
+                                        {% endif %}
+                                        <button type="submit" name="change_password">Change Password</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- -------------------------JS-Link------------------------- -->
+    <script src="{% static 'js/After_Login.js' %}"></script>
+    <script>
+
+        // -------------------------Message-Timeout-------------------------
+        document.addEventListener("DOMContentLoaded", function () {
+            // Select all messages
+            let messages = document.querySelectorAll(".messages li");
+
+            // Set timeout to remove messages after 3-4 seconds
+            if (messages.length > 0) {
+                setTimeout(function () {
+                    messages.forEach(message => {
+                        message.style.transition = "opacity 0.2s";
+                        message.style.opacity = "0"; // Fade out
+
+                        // Remove from DOM after fade-out
+                        setTimeout(() => message.remove(), 500);
+                    });
+                }, 3000); // Change this time (3000ms = 3 seconds)
+            }
+        });
+    </script>
+</body>
+
+</html>

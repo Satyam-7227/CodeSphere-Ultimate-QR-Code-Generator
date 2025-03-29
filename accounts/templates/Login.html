@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    
+    <!-- -------------------------Google-Fonts-Inter------------------------- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat&display=swap"
+        rel="stylesheet">
+
+    <!-- -------------------------Css-Link------------------------- -->
+    <link rel="stylesheet" href="{% static 'css/Login.css' %}">
+</head>
+
+<body>
+
+    <!-- -------------------------Login-Content------------------------- -->
+    <div class="container">
+        <div class="form-box">
+            <div class="left-side">
+                <a href="{% url 'home' %}" class="logo">CodeSphere</a>
+                <img src="https://qrcodeveloper.com/static/media/sign-up-frame.77462e9263c5cedce4fdfb7d8c269f00.svg"
+                    alt="Login Image">
+            </div>
+            <div class="right-side">
+                <h2>Login</h2>
+                {% if messages %}
+                <ul>
+                    {% for message in messages %}
+                    <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+
+                <form id="login-form" action="{% url 'login' %}" method="POST">
+                    {% csrf_token %}
+                    <div class="input-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <button type="submit">Login</button>
+                </form>
+
+                <p>Don't have an account? <a href="{% url 'register' %}">Register</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
