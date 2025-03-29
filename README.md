@@ -1,7 +1,5 @@
-# CodeSphere-Ultimate-QR-Code-Generator
 # CodeSphere: Ultimate QR Code Generator
 
-![Project Logo](https://via.placeholder.com/600x200?text=CodeSphere+QR+Generator)
 
 ## Project Overview
 CodeSphere is a **Full Stack Development (FSD) Project** created for **Semester 3** as part of the FSD subject. This project is designed for exam purposes and demonstrates a complete web-based **QR Code Generator** using **HTML, CSS, JavaScript, and Django** as the backend.
